@@ -12,7 +12,7 @@ export default function Events()
         {
             try
             {
-                const res = await fetch('http://localhost:5000/events');
+                const res = await fetch('https://morgantown-boosters-t3c2.vercel.app/events');
                 console.log(res);
                 if (!res.ok) throw new Error('Failed to fetch events');
                 const data = await res.json();
