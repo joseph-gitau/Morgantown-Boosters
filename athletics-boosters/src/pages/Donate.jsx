@@ -31,7 +31,7 @@ export default function Donate()
             setErrors(validationErrors);
             return;
         }
-        fetch('http://localhost:5000/donate', {
+        fetch('https://morgantown-boosters-t3c2.vercel.app/donate', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
