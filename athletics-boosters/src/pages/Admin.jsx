@@ -18,7 +18,7 @@ export default function Admin()
 
     useEffect(() =>
     {
-        fetch('http://localhost:5000/api/auth')
+        fetch('https://morgantown-boosters-t3c2.vercel.app/api/auth')
             .then((res) => res.json())
             .then((data) =>
             {
@@ -29,7 +29,7 @@ export default function Admin()
 
     const logout = async () =>
     {
-        await fetch('http://localhost:5000/api/logout', {method: 'POST'});
+        await fetch('https://morgantown-boosters-t3c2.vercel.app/api/logout', {method: 'POST'});
         navigate('/login');
     };
 
@@ -41,14 +41,14 @@ export default function Admin()
 
     const fetchEvents = async () =>
     {
-        const res = await fetch('http://localhost:5000/events');
+        const res = await fetch('https://morgantown-boosters-t3c2.vercel.app/events');
         const data = await res.json();
         setEvents(data);
     };
 
     const fetchDonations = async () =>
     {
-        const res = await fetch('http://localhost:5000/donations');
+        const res = await fetch('https://morgantown-boosters-t3c2.vercel.app/donations');
         const data = await res.json();
         setDonations(data);
     };
@@ -65,8 +65,8 @@ export default function Admin()
 
         const method = editingId ? 'PUT' : 'POST';
         const url = editingId
-            ? `http://localhost:5000/events/${editingId}`
-            : 'http://localhost:5000/events';
+            ? `https://morgantown-boosters-t3c2.vercel.app/events/${editingId}`
+            : 'https://morgantown-boosters-t3c2.vercel.app/events';
 
         const res = await fetch(url, {
             method,
@@ -103,7 +103,7 @@ export default function Admin()
         const confirmed = confirm('Delete this event?');
         if (!confirmed) return;
 
-        const res = await fetch(`http://localhost:5000/events/${id}`, {
+        const res = await fetch(`https://morgantown-boosters-t3c2.vercel.app/events/${id}`, {
             method: 'DELETE'
         });
 
