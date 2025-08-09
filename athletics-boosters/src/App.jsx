@@ -12,17 +12,20 @@ export default function App()
 {
     return (
         <div className="font-sans bg-gray-50 min-h-screen">
-            <Navbar/>
-            <div className="p-4">
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/donate" element={<Donate/>}/>
-                    <Route path="/events" element={<Events/>}/>
-                    <Route path="/sponsors" element={<Sponsors/>}/>
-                    <Route path="/admin" element={<Admin/>}/>
-                    <Route path="/login" element={<Login/>}/>
-                </Routes>
+            <Navbar />
+            <div className="px-4 flex justify-center mb-4">
+                <div className="bg-white shadow-lg rounded-0 w-full max-w-6xl p-6">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/donate" element={<Donate />} />
+                        <Route path="/events" element={<Events />} />
+                        <Route path="/sponsors" element={<Sponsors />} />
+                        <Route path="/admin" element={<Admin />} />
+                        <Route path="/login" element={<Login />} />
+                    </Routes>
+                </div>
             </div>
         </div>
     );
+
 }
