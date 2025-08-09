@@ -12,7 +12,6 @@ Built using React,tailwind css, node js
 - Add new events with title, description, date, location, and fundraising goal.
 - View list of existing events.
 
-
 ### Public Website
 - Browse all fundraising events.
 - View event details
@@ -23,7 +22,6 @@ Built using React,tailwind css, node js
 - Serves a RESTful API for events.
 - Stores event data in a local `fundraising.db` file.
 
-
 ### Running the App
 
 Terminal 1 - Start Backend:
@@ -33,3 +31,5 @@ Terminal 1 - Start Backend:
 Terminal 2 - Start Frontend:
 1. cd athletics-boosters
 2. `npm run dev`
+
+update readme
